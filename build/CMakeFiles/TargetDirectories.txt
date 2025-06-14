@@ -1,0 +1,3 @@
+/Users/ars/My/crypto-stego-c-/build/CMakeFiles/SteganographyProject.dir
+/Users/ars/My/crypto-stego-c-/build/CMakeFiles/edit_cache.dir
+/Users/ars/My/crypto-stego-c-/build/CMakeFiles/rebuild_cache.dir
