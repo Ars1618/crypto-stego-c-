@@ -64,10 +64,12 @@ CMAKE_BINARY_DIR = /Users/ars/My/crypto-stego-c-/build
 
 # The main recursive "all" target.
 all: CMakeFiles/SteganographyProject.dir/all
+all: CMakeFiles/tests.dir/all
 .PHONY : all
 
 # The main recursive "codegen" target.
 codegen: CMakeFiles/SteganographyProject.dir/codegen
+codegen: CMakeFiles/tests.dir/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
@@ -76,6 +78,7 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/SteganographyProject.dir/clean
+clean: CMakeFiles/tests.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -109,6 +112,38 @@ CMakeFiles/SteganographyProject.dir/codegen:
 CMakeFiles/SteganographyProject.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SteganographyProject.dir/build.make CMakeFiles/SteganographyProject.dir/clean
 .PHONY : CMakeFiles/SteganographyProject.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/tests.dir
+
+# All Build rule for target.
+CMakeFiles/tests.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/ars/My/crypto-stego-c-/build/CMakeFiles --progress-num=4,5,6 "Built target tests"
+.PHONY : CMakeFiles/tests.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/tests.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ars/My/crypto-stego-c-/build/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/tests.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ars/My/crypto-stego-c-/build/CMakeFiles 0
+.PHONY : CMakeFiles/tests.dir/rule
+
+# Convenience name for target.
+tests: CMakeFiles/tests.dir/rule
+.PHONY : tests
+
+# codegen rule for target.
+CMakeFiles/tests.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/ars/My/crypto-stego-c-/build/CMakeFiles --progress-num=4,5,6 "Finished codegen for target tests"
+.PHONY : CMakeFiles/tests.dir/codegen
+
+# clean rule for target.
+CMakeFiles/tests.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/clean
+.PHONY : CMakeFiles/tests.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

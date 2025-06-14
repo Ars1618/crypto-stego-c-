@@ -23,7 +23,7 @@ int main() {
     std::cout << "Выберите действие: Встроить текст в изображение(1) или извлеч сообщение из изображения(2): " << std::endl;
     std::cin >> action;
     if (action == 1){
-        std::cout << "Введите сообщение которое хотите встроить: " << std::endl;
+        std::cout << "Введите сообщение которое хотите встроить (без пробелов!): " << std::endl;
         std::cin >> mess;
         std::cout << "Выберите шифр, с помощью которого, сообщение будет зашифрованно "
                      "и встроенно в изображение: Шифр Виженера(1), шифр Виженера по открытому тексту(2), "
@@ -63,6 +63,7 @@ int main() {
         std::vector<bool> message = stringToBits(temp_mess);
         embedMessage(grayImage, message);
         stegoImage("stego.png", grayImage, width, height);
+        std::cout << "Вшитое в изображение зашифрованное сообщение: : " << temp_mess<< std::endl;
     }
     else if (action == 2){
         std::string extract_message = extractMessage("stego.png");

@@ -3,19 +3,27 @@ project(SteganographyProject)
 
 set(CMAKE_CXX_STANDARD 17)
 
-# Явное указание файлов
-set(SOURCES
+# Основная программа
+add_executable(${PROJECT_NAME}
         main.cpp
         functions.cpp
 )
-
-# Подключаем директории
-include_directories(.)
-
-# Создаем исполняемый файл
-add_executable(${PROJECT_NAME} ${SOURCES})
 
 # Для Linux/macOS: математическая библиотека
 if(UNIX)
     target_link_libraries(${PROJECT_NAME} m)
 endif()
+
+# Тесты
+add_executable(tests
+        test.cpp
+        functions.cpp
+)
+
+# Для тестов тоже нужны математические библиотеки
+if(UNIX)
+    target_link_libraries(tests m)
+endif()
+
+# Подключаем директории для всех целей
+include_directories(.)

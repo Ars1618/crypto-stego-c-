@@ -129,12 +129,26 @@ SteganographyProject/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SteganographyProject.dir/build.make CMakeFiles/SteganographyProject.dir/build
 .PHONY : SteganographyProject/fast
 
+#=============================================================================
+# Target rules for targets named tests
+
+# Build rule for target.
+tests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests
+.PHONY : tests
+
+# fast build rule for target.
+tests/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/build
+.PHONY : tests/fast
+
 functions.o: functions.cpp.o
 .PHONY : functions.o
 
 # target to build an object file
 functions.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SteganographyProject.dir/build.make CMakeFiles/SteganographyProject.dir/functions.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/functions.cpp.o
 .PHONY : functions.cpp.o
 
 functions.i: functions.cpp.i
@@ -143,6 +157,7 @@ functions.i: functions.cpp.i
 # target to preprocess a source file
 functions.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SteganographyProject.dir/build.make CMakeFiles/SteganographyProject.dir/functions.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/functions.cpp.i
 .PHONY : functions.cpp.i
 
 functions.s: functions.cpp.s
@@ -151,6 +166,7 @@ functions.s: functions.cpp.s
 # target to generate assembly for a file
 functions.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SteganographyProject.dir/build.make CMakeFiles/SteganographyProject.dir/functions.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/functions.cpp.s
 .PHONY : functions.cpp.s
 
 main.o: main.cpp.o
@@ -177,6 +193,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SteganographyProject.dir/build.make CMakeFiles/SteganographyProject.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+test.o: test.cpp.o
+.PHONY : test.o
+
+# target to build an object file
+test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/test.cpp.o
+.PHONY : test.cpp.o
+
+test.i: test.cpp.i
+.PHONY : test.i
+
+# target to preprocess a source file
+test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/test.cpp.i
+.PHONY : test.cpp.i
+
+test.s: test.cpp.s
+.PHONY : test.s
+
+# target to generate assembly for a file
+test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/test.cpp.s
+.PHONY : test.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -186,12 +226,16 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... SteganographyProject"
+	@echo "... tests"
 	@echo "... functions.o"
 	@echo "... functions.i"
 	@echo "... functions.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... test.o"
+	@echo "... test.i"
+	@echo "... test.s"
 .PHONY : help
 
 

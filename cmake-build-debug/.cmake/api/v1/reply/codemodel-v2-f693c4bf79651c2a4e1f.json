@@ -15,7 +15,8 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -30,7 +31,8 @@
 					"name" : "SteganographyProject",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -39,8 +41,15 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "SteganographyProject::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-SteganographyProject-Debug-0db5f37ce572e109ebfe.json",
+					"jsonFile" : "target-SteganographyProject-Debug-3957cd4c34f3297c13dc.json",
 					"name" : "SteganographyProject",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tests::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tests-Debug-e2c4d599349b18413ad4.json",
+					"name" : "tests",
 					"projectIndex" : 0
 				}
 			]
